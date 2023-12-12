@@ -1,7 +1,7 @@
 > ## FreeControl: Training-Free Spatial Control of Any Text-to-Image Diffusion Model with Any Condition
 > ### [[Paper]]() [[Project Page]](https://genforce.github.io/freecontrol/) <br>
 > [Sicheng Mo](https://sichengmo.github.io/)<sup>1*</sup>, [Fangzhou Mu](https://pages.cs.wisc.edu/~fmu/)<sup>2*</sup>, 
-> [Kuan Heng Lin](https://kuanheng.github.io/)<sup>1</sup>, [Yanli Liu](https://www.linkedin.com/in/yanli-liu-2b1b1b1b/)<sup>3</sup>,
+> [Kuan Heng Lin](https://kuanhenglin.github.io)<sup>1</sup>, [Yanli Liu](https://scholar.google.ca/citations?user=YzXIxCwAAAAJ&hl=en)<sup>3</sup>,
 > Bochen Guan<sup>3</sup>, [Yin Li](https://www.biostat.wisc.edu/~yli/)<sup>2</sup>, [Bolei Zhou](https://boleizhou.github.io/)<sup>1</sup> <br>
 >      <sup>1</sup> UCLA, <sup>2</sup> University of Wisconsin-Madison, <sup>3</sup> Innopeak Technology, Inc <br>
 > <sup>*</sup> Equal contribution <br>
