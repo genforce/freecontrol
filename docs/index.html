@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Project Page Template</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <a href="https://genforce.github.io/" target="_blank"><img src="./assets/genforce.png"></a>
+    </div>
+    <div class="title", style="padding-top: 25pt;">  <!-- Set padding as 10 if title is with two lines. -->
+      FreeControl: Training-Free Spatial Control of Any Text-to-Image Diffusion Model with Any Condition
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="https://sichengmo.github.io/" target="_blank">Sicheng Mo</a><sup>1</sup>*,&nbsp
+    <a href="https://pages.cs.wisc.edu/~fmu/" target="_blank">Fangzhou Mu</a><sup>2</sup>*,&nbsp
+    <a href="https://kuanhenglin.github.io" target="_blank">Kuan Heng Lin</a><sup>1</sup>,&nbsp
+    <a href="https://scholar.google.ca/citations?user=YzXIxCwAAAAJ&hl=en" target="_blank">Yanli Liu</a><sup>3</sup>,&nbsp
+    <a href="#" target="_blank">Bochen Guan</a><sup>3</sup>,&nbsp
+    <a href="https://www.biostat.wisc.edu/~yli/" target="_blank">Yin Li</a><sup>2</sup>,&nbsp
+    <a href="https://boleizhou.github.io/" target="_blank">Bolei Zhou</a><sup>1</sup>
+  </div>
+  <div class="institution">
+     <sup>1</sup> UCLA,
+     <sup>2</sup> University of Wisconsin-Madison,
+     <sup>3</sup> Innopeak Technology, Inc
+  </div>
+
+  <div class="note">
+    * indicates equally contribution
+  </div>
+
+  <div class="link">
+    <a href="#" target="_blank">[Paper]</a>&nbsp;
+    <a href="https://github.com/genforce/freecontrol" target="_blank">[Code (coming soon)]</a>
+  </div>
+  <div class="teaser">
+    <img src="assets/teaser1.jpg">
+  </div>
+<!--  <div class="bodysmall">-->
+
+<!--    Training-free conditional control of Stable Diffusion. (a) FreeControl enables zero-shot control of pre-trained text-to-image-->
+<!--    diffusion models given an input condition image in any modality. (b) Compared to ControlNet, FreeControl exhibits-->
+<!--    better image-text alignment and does not require spatially-aligned conditions for controllable generation.-->
+
+<!--  </div>-->
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+     In this work, we present FreeControl, a training-free approach for controllable T2I
+    generation that supports multiple conditions, architectures, and checkpoints simultaneously.
+    FreeControl designs structure guidance to facilitate the structure alignment with a guidance image, and appearance guidance to enable the
+    appearance sharing between images generated using the same seed.
+<!--    Extensive qualitative and quantitative-->
+<!--    experiments demonstrate the superior performance of FreeControl across a variety of pre-trained T2I models.-->
+<!--    Extensive qualitative and quantitative experiments demonstrate the superior performance of FreeControl across a variety of pre-trained T2I models.-->
+<!--    In particular,-->
+<!--    FreeControl facilitates convenient training-free control over many different architectures-->
+<!--    and checkpoints, allows the challenging input conditions on which most of the existing training-free methods fail,-->
+<!--    and achieves competitive synthesis quality with training-based approaches.-->
+<!--    Simple description of the project. Please don't directly copy and paste the abstract.-->
+<!--    Make the brief summary of your work in layman English, and explain why it is interesting and important.-->
+    FreeControl combines an analysis stage and a synthesis stage. In the analysis stage, FreeControl queries a
+    T2I model to generate as few as one seed image and then constructs a linear feature subspace from the generated images.
+    In the synthesis stage, FreeControl employs guidance in the subspace to facilitate structure alignment with a guidance
+    image, as well as appearance alignment between images generated with and without control.
+
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="assets/pipeline.png" width="80%"></td>
+      </tr>
+    </table>
+
+
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Qualitative Results</div>
+  <div class="body">
+
+    Controllable generation with T2I diffusion models.
+    <!-- Adjust the number of rows and columns (EVERY project differs). -->
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="assets/results/our_cond2img.png" width="100%"></td>
+      </tr>
+    </table>
+
+<!--    Any condition generation:-->
+<!--    <table width="100%" style="margin: 20pt 0; text-align: center;">-->
+<!--      <tr>-->
+<!--        <td><img src="assets/results/any_cond_gen.png" width="90%"></td>-->
+<!--      </tr>-->
+<!--    </table>-->
+
+<!--    Help art creation with custom models from <a href="https://civitai.com/models/89804/ip-design-or-3d" target="_blank">[link]</a>&nbsp;.-->
+<!--    <table width="100%" style="margin: 20pt 0; text-align: center;">-->
+<!--      <tr>-->
+<!--        <td><img src="assets/results/art_creation.png" width="100%"></td>-->
+<!--      </tr>-->
+<!--    </table>-->
+
+
+  </div>
+</div>
+
+
+<!-- === Result Section Ends === -->
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">More Results</div>
+  <div class="body">
+
+
+    Any condition generation:
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="assets/results/any_cond_gen.png" width="90%"></td>
+      </tr>
+    </table>
+
+<!--    Help art creation with custom models from <a href="https://civitai.com/models/89804/ip-design-or-3d" target="_blank">[link]</a>&nbsp;.-->
+<!--    <table width="100%" style="margin: 20pt 0; text-align: center;">-->
+<!--      <tr>-->
+<!--        <td><img src="assets/results/art_creation.png" width="100%"></td>-->
+<!--      </tr>-->
+<!--    </table>-->
+
+
+  </div>
+</div>
+
+
+<!-- === Result Section Ends === -->
+
+
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{alias,
+  title   = {FreeControl: Training-Free Spatial Control of Any Text-to-Image Diffusion Model with Any Condition},
+  author  = {Sicheng Mo, Fangzhou Mu, Kuan Heng Lin, Yanli Liu, Bochen Guan, Yin Li, Bolei Zhou},
+  journal = {arXiv},
+  year    = {2023}
+}
+</pre>
+
+  <!-- BZ: we should give other related work enough credits, -->
+  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="assets/controlnet.png"></div>
+    <div class="comment">
+      <a href="#" target="_blank">
+        Lvmin Zhang, Anyi Rao, Maneesh Agrawala.
+        Adding Conditional Control to Text-to-Image Diffusion Models.
+        ICCV 2023.</a><br>
+      <b>Comment:</b>
+      Builds a addition encoder to add spatial conditioning controls to T2I diffusion models.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="assets/pnp.png"></div>
+    <div class="comment">
+      <a href="#" target="_blank">
+        Narek Tumanyan, Michal Geyer, Shai Bagon, Tali Dekel.
+        Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation.
+        CVPR 2023.</a><br>
+      <b>Comment:</b>
+      Training-free method for image-to-image translation via attention and conv feature injection.
+    </div>
+  </div>
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>
