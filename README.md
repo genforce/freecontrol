@@ -11,9 +11,11 @@
 
 [//]: # (## Overview)
 
+[//]: # ()
 [//]: # (This is the official PyTorch implementation of our method for Controllable Generation with pre-trained Diffusion Models.)
 
-
+[//]: # ()
+[//]: # (## Quick Start)
 
 Code coming soon. Stay tuned!
 
