@@ -26,9 +26,9 @@ Code coming soon. Stay tuned!
 
 ```
 @article{mo2023freecontrol,
-  author      = {Mo, Sicheng and Mu, Fangzhou and Lin, Heng Kuan and Liu, Yanli and Guan, Bochen and Li, Yin and Zhou, Bolei},
-  title       = {FreeControl: Training-Free Spatial Control of Any Text-to-Image Diffusion Model with Any Condition},
-  publisher   = {arXiv:XXXXXXXX},
-  year        = {2023},
+  title={FreeControl: Training-Free Spatial Control of Any Text-to-Image Diffusion Model with Any Condition},
+  author={Mo, Sicheng and Mu, Fangzhou and Lin, Kuan Heng and Liu, Yanli and Guan, Bochen and Li, Yin and Zhou, Bolei},
+  journal={arXiv preprint arXiv:2312.07536},
+  year={2023}
 }
 ```
