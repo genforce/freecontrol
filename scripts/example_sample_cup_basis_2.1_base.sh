@@ -1,6 +1,6 @@
 PROMPT="A photo of a cup, with a simple background, best quality, extremely detailed"
 NEGATIVE_PROMPT="fewer digits, cropped, worst quality, low quality"
-SD_VERSION="1.5"
+SD_VERSION="2.1_base"
 MODEL_NAME="naive"
 HEIGHT=512
 WIDTH=512
