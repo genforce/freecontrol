@@ -207,7 +207,6 @@ def main():
 
                 pca_basis = gr.Dropdown(label="Select Semantic Bases",
                                         choices=pca_basis_list, )
-                print(pca_basis.value)
                 sd_version.change(fn=change_sd_version, inputs=sd_version,
                                   outputs=[model_ckpt, pca_basis],
                                   scroll_to_output=True)

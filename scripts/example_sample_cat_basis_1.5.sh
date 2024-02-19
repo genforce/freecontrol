@@ -1,4 +1,4 @@
-PROMPT="A photo of a cup, with a simple background, best quality, extremely detailed"
+PROMPT="A photo of a cat, with a simple background, best quality, extremely detailed"
 NEGATIVE_PROMPT="fewer digits, cropped, worst quality, low quality"
 SD_VERSION="2.1_base"
 MODEL_NAME="naive"
@@ -6,7 +6,7 @@ HEIGHT=512
 WIDTH=512
 SEED=2024
 NUM_STEPS=200
-OUTPUT_CLASS="cut"
+OUTPUT_CLASS="cat"
 
 python sample_semantic_bases.py --prompt "${PROMPT}" \
 --negative_prompt "${NEGATIVE_PROMPT}" \
