@@ -1,0 +1,74 @@
+# SD config
+sd_config:
+  H: 512                          # Generated image weight
+  W: 512                          # Generated image height
+  steps: 200                      # Diffusion scale
+  guidance_scale: 7.5             # Classifier-free guidance scale
+  grad_guidance_scale: 1          # Gradient guidance scale, it will be multiplied with the weight in each type of guidance
+  sd_version: '2.1'               # choice from ['2,1'|'2.0'|'1.4']
+  dreambooth: null                # Path to dreambooth. Set to null to disable dreambooth
+  safetensors: True                # whether to use safetenosr. For most ckpt from civitai.com, they used safetensor format
+  same_latent: False            # whether to use the same latent from inversion
+  appearnace_same_latent: False
+  pca_paths:
+    []
+  seed: 922                       # Seed for random number generator
+  generated_sample: False          # Whether to use generated sample as the reference pose
+  prompt : ""    # Prompt for generated sample
+  negative_prompt: "longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality"  # Prompt for negative sample
+  target_obj: ''             # Target object for inversion
+  obj_pairs: ""
+
+data:
+  inversion:
+    target_folder: 'dataset/latent'
+    num_inference_steps: 999
+    method: 'DDIM'                # choice from ['DDIM'|'NTI'|'NPT']
+    fixed_size: [512,512]              # Set to null to disable fixed size, otherwise set to the fixed size (h,w) of the target image
+    prompt: "A photo of a person, holding his hands, sketch"
+    select_objects: "person"
+    policy: "share"               # choice from ['share'|'separate']
+    sd_model: ''
+
+# Guidance config
+guidance:
+  pca_guidance:
+    start_step: 0               # Start step for PCA self-attention injection
+    end_step: 80               # End step for PCA injection
+    weight: 800                 # Weight for PCA self-attention injection
+    select_feature: "key"
+#    weight1: 0
+    structure_guidance: # Parameters for PCA injection
+      apply: True               # Whether apply PCA injection
+      n_components: 64          # Number of leading components for PCA injection
+      normalized: True          # Whether normalize the PCA score
+      mask_type: 'cross_attn'   # Mask type for PCA injection, choice from ['cross_attn'|'tr']
+      penalty_type: 'max'       # Penalty type for PCA injection, choice from ['max'|'mean']
+      mask_tr: 0.3             # Threshold for PCA score, only applied when normalized is true
+      penalty_factor: 10       # Penalty factor for masked region, only applied when normalized is true
+    warm_up: # Parameters for Guidance weight warm up
+      apply: True               # Whether apply warm up
+      end_step: 10              # End step for warm up
+    adaptive: # Parameters for adaptive self-attention injection
+      apply: False               # Whether apply adaptive self-attention injection
+      adaptive_p: 1             # power of the adaptive threshold
+    blocks: # Blocks for self-attention injection
+      [ 'up_blocks.1']
+    appearance_guidance: # Parameters for texture regulation
+      apply: True               # Whether apply texture regulation
+      reg_factor: 0.05           # Regularization factor
+      tr: 0.5
+      cross_attn_mask_tr: 0.3
+      app_n_components: 2       # Number of leading components used to extract mean appearance feature
+
+  cross_attn:
+    start_step: 0               # Start step for cross-attention guidance
+    end_step: 80               # End step for cross-attention guidance
+    weight: 0                 # Weight for cross-attention guidance
+    obj_only: True              # Whether apply object only cross-attention guidance
+    soft_guidance: # Parameters for soft guidance
+      apply: True               # Whether apply soft guidance
+      kernel_size: 5            # Kernel size for Gaussian blur
+      sigma: 2                  # Sigma for Gaussian blur
+    blocks:
+      [ 'up_blocks.1']

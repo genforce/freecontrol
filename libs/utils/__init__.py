@@ -1,0 +1,1 @@
+from .controlnet_processor import make_processor

@@ -17,8 +17,30 @@
 [//]: # ()
 [//]: # (## Quick Start)
 
-Code coming soon. Stay tuned!
+## Getting Started
 
+**Environment Setup**
+- We proovide a [conda env file](environment.yml) for environment setup. 
+```bash
+conda env create -f environment.yml
+conda activate freecontrol
+```
+
+**Sample Semantic Bases**
+- We provide two example file under the [scripts](scripts) folder as an example of how to compute target semantic bases.
+- You can also download from [google drive](https://drive.google.com/file/d/1o1BcIBANukeJ2pCG064-eNH9hbQoB24Z/view?usp=sharing) to use our pre-computed bases.
+- After downloading the file, you can put it under the [dataset](dataset) folder and use the gradio demo.
+
+
+**Gradio demo**
+- We provide the user interface for testing out method. Ruuning the following commend to start the demo.
+```python
+python gradio_app.py
+```
+
+
+## Galley:
+We are building a gallery generated with FreeControl. You are wellcomed to share your generated images with us. 
 ## Contact 
 [Sicheng Mo](https://sichengmo.github.io/) (smo3@cs.ucla.edu)
 

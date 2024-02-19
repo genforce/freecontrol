@@ -1,0 +1,11 @@
+checkpoints:
+  '1.5':
+    naive:
+      path: runwayml/stable-diffusion-v1-5
+      pca_basis:
+        cat_step_200_sample_20_id_0: dataset/basis/1.5/naive/cat/step_200_sample_20_id_0/pca_info.pt
+  2.1_base:
+    naive:
+      path: stabilityai/stable-diffusion-2-1
+      pca_basis:
+        cup_step_200_sample_20_id_0: dataset/basis/2.1_base/naive/cup/step_200_sample_20_id_0/pca_info.pt
