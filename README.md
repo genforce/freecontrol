@@ -5,6 +5,7 @@
 > Bochen Guan<sup>3</sup>, [Yin Li](https://www.biostat.wisc.edu/~yli/)<sup>2</sup>, [Bolei Zhou](https://boleizhou.github.io/)<sup>1</sup> <br>
 >      <sup>1</sup> UCLA, <sup>2</sup> University of Wisconsin-Madison, <sup>3</sup> Innopeak Technology, Inc <br>
 > <sup>*</sup> Equal contribution <br>
+> Computer Vision and Pattern Recognition (CVPR), 2024 <br>
 <p align="center">
   <img src="docs/assets/teaser1.jpg" alt="teaser" width="90%" height="90%">
 </p>
