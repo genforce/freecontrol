@@ -9,3 +9,8 @@ checkpoints:
       path: stabilityai/stable-diffusion-2-1
       pca_basis:
         cup_step_200_sample_20_id_0: dataset/basis/2.1_base/naive/cup/step_200_sample_20_id_0/pca_info.pt
+  XL_1.0:
+    naive:
+      path: stabilityai/stable-diffusion-xl-base-1.0
+      pca_basis:
+        car_step_200_sample_5_id_0: dataset/basis/XL_1.0/naive/car/step_200_sample_5/pca_info.pt
