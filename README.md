@@ -15,7 +15,7 @@
 This is the official implementation of FreeControl, a Generative AI algorithm for controllable text-to-image generation using pre-trained Diffusion Models.
 
 ## Changelog
-* 10/21/2024: Added SDXL pipeline.
+* 10/21/2024: Added SDXL pipeline (thanks to @shirleyzhu233).
 
 * 02/19/2024: Initial code release. The paper is accepted to CVPR 2024.
 
