@@ -304,8 +304,8 @@ class FreeControlSDPipeline(StableDiffusionPipeline):
                     self.compute_cross_attn_mask(cond_control_ids, cond_example_ids, cond_appearance_ids)
 
                 if _in_step(self.guidance_config.pca_guidance, i):
-                    # Compute the PCA structure and appearance guidance
-                    # Set the select feature to key by default
+                # Compute the PCA structure and appearance guidance
+                # Set the select feature to key by default
                     try:
                         select_feature = self.guidance_config.pca_guidance.select_feature
                     except:

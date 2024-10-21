@@ -2,6 +2,8 @@ import argparse
 import os
 
 import torch
+torch.backends.cuda.matmul.allow_tf32 = True
+torch.backends.cudnn.allow_tf32 = True
 import yaml
 from omegaconf import OmegaConf
 
@@ -23,12 +25,16 @@ def main(args):
 
     config = yaml.load(open(args.config_path, "r"), Loader=yaml.FullLoader)
     config = OmegaConf.create(config)
-    pipeline_name = "SDPipeline"
+    if 'XL' in args.sd_version:
+        pipeline_name = "SDXLPipeline"
+    else:
+        pipeline_name = "SDPipeline"
     pipeline = make_pipeline(pipeline_name,
                              model_path,
                              torch_dtype=torch.float16
                              ).to('cuda')
     pipeline.enable_xformers_memory_efficient_attention()
+    pipeline.enable_sequential_cpu_offload()
     pipeline.scheduler = CustomDDIMScheduler.from_pretrained(model_path, subfolder="scheduler")
     g = torch.Generator()
     g.manual_seed(args.seed)
