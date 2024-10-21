@@ -10,18 +10,19 @@
   <img src="docs/assets/teaser1.jpg" alt="teaser" width="90%" height="90%">
 </p>
 
-[//]: # (## Overview)
+## Overview
 
-[//]: # ()
-[//]: # (This is the official PyTorch implementation of our method for Controllable Generation with pre-trained Diffusion Models.)
+This is the official implementation of FreeControl, a Generative AI algorithm for controllable text-to-image generation using pre-trained Diffusion Models.
 
-[//]: # ()
-[//]: # (## Quick Start)
+## Changelog
+* 10/21/2024: Added SDXL pipeline.
+
+* 02/19/2024: Initial code release. The paper is accepted to CVPR 2024.
 
 ## Getting Started
 
 **Environment Setup**
-- We proovide a [conda env file](environment.yml) for environment setup. 
+- We provide a [conda env file](environment.yml) for environment setup. 
 ```bash
 conda env create -f environment.yml
 conda activate freecontrol
@@ -30,20 +31,19 @@ pip install -U gradio
 ```
 
 **Sample Semantic Bases**
-- We provide two example file under the [scripts](scripts) folder as an example of how to compute target semantic bases.
-- You can also download from [google drive](https://drive.google.com/file/d/1o1BcIBANukeJ2pCG064-eNH9hbQoB24Z/view?usp=sharing) to use our pre-computed bases.
-- After downloading the file, you can put it under the [dataset](dataset) folder and use the gradio demo.
+- We provide three sample scripts in the [scripts](scripts) folder (one for each base model) to showcase how to compute target semantic bases.
+- You may also download pre-computed bases from [google drive](https://drive.google.com/file/d/1o1BcIBANukeJ2pCG064-eNH9hbQoB24Z/view?usp=sharing). Put them in the [dataset](dataset) folder and launch the gradio demo.
 
 
 **Gradio demo**
-- We provide the user interface for testing out method. Ruuning the following commend to start the demo.
+- We provide a graphical user interface (GUI) for users to try out FreeControl. Run the following command to start the demo.
 ```python
 python gradio_app.py
 ```
 
 
 ## Galley:
-We are building a gallery generated with FreeControl. You are wellcomed to share your generated images with us. 
+We are building a gallery of images generated with FreeControl. You are welcome to share your generated images with us. 
 ## Contact 
 [Sicheng Mo](https://sichengmo.github.io/) (smo3@cs.ucla.edu)
 
