@@ -69,13 +69,20 @@ def freecontrol_generate(condition_image, prompt, scale, ddim_steps, sd_version,
     input_config = gradio_update_parameter
 
     # Load base config
-    base_config = yaml.load(open("config/base.yaml", "r"), Loader=yaml.FullLoader)
+    if 'XL' in sd_version:
+        config_path = 'config/sdxl_base.yaml'
+    else:
+        config_path = 'config/base.yaml'
+    base_config = yaml.load(open(config_path, "r"), Loader=yaml.FullLoader)
     # Update the Default config by gradio config
     config = merge_sweep_config(base_config=base_config, update=input_config)
     config = OmegaConf.create(config)
 
     # set the correct pipeline
-    pipeline_name = "SDPipeline"
+    if 'XL' in sd_version:
+        pipeline_name = "SDXLPipeline"
+    else:
+        pipeline_name = "SDPipeline"
 
     pipeline = make_pipeline(pipeline_name,
                              model_path,
@@ -277,7 +284,7 @@ def main():
 
         run_button.click(fn=freecontrol_generate, inputs=ips, outputs=[result_gallery])
 
-    block.launch(server_name='0.0.0.0', share=False, server_port=9989)
+    block.launch(server_name='0.0.0.0', share=True, server_port=9989)
 
 
 if __name__ == '__main__':

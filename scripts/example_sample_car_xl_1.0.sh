@@ -8,7 +8,9 @@ SEED=28988
 NUM_STEPS=200
 OUTPUT_CLASS="car"
 
-python sample_semantic_basis.py --prompt "${PROMPT}" \
+python sample_semantic_bases.py \
+--config_path "config/sdxl_base.yaml" \
+--prompt "${PROMPT}" \
 --negative_prompt "${NEGATIVE_PROMPT}" \
 --sd_version ${SD_VERSION} \
 --model_name ${MODEL_NAME} \
@@ -17,7 +19,6 @@ python sample_semantic_basis.py --prompt "${PROMPT}" \
 --seed ${SEED} \
 --num_steps ${NUM_STEPS} \
 --output_class ${OUTPUT_CLASS} \
---mask_obj ${OUTPUT_CLASS} \
 --num_images 5 \
---num_batch 1 \
+--num_batch 4 \
 --log \
